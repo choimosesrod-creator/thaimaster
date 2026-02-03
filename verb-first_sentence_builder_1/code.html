@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="dark" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ecda",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102220",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "Noto Sans KR", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<title>동사 중심 문장 빌더 V2 (한국어)</title>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+            font-family: 'Noto Sans KR', 'Lexend', sans-serif;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-white">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden pb-20">
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between border-b border-primary/10">
+<div class="text-white flex size-12 shrink-0 items-center cursor-pointer" data-icon="ArrowLeft">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">동사 중심 문장 빌더</h2>
+</div>
+<div class="flex flex-col gap-2 p-4">
+<div class="flex gap-6 justify-between items-center">
+<p class="text-white/80 text-sm font-medium">학습 진행도</p>
+<p class="text-primary text-sm font-bold">65%</p>
+</div>
+<div class="rounded bg-[#3b5452] h-1.5 overflow-hidden">
+<div class="h-full rounded bg-primary" style="width: 65%;"></div>
+</div>
+</div>
+<div class="px-4">
+<h3 class="text-white tracking-tight text-2xl font-bold leading-tight text-center pb-1 pt-4">핵심 동사 (Core Verb)</h3>
+<p class="text-white/60 text-center text-sm px-6 leading-relaxed">동사를 중심으로 수식어 블록을 배치하여 태국어 문장 구조를 완성하세요.</p>
+</div>
+<div class="p-4 flex justify-center">
+<div class="w-full max-w-sm">
+<div class="bg-cover bg-center flex flex-col items-stretch justify-end rounded-xl pt-[120px] shadow-[0_0_30px_rgba(19,236,218,0.15)] border-2 border-primary/40" style='background-image: linear-gradient(0deg, rgba(16, 34, 32, 0.95) 0%, rgba(16, 34, 32, 0.1) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCTMP567iqIi7tTQv59rJVXU2HVcZrbVSIcDNrSAlWwD2EE0rwnGjIU2PiYewEyO62vyF5Ij1zRdPQ6MIKJlqxFLP75SLNFWnVlAviuer7OK_iIvBHPUp5Ou5ugtn8fxJSy0YpLxDeMMnHU-D9NhMXu_qweyfhrteqItCefsVQpoxizc1JDUvnAe5zFtovFihc8dW7lMmynTiR3ZkLfStW5CxqK6V6cPfxgC0e9Xtj44lWB_mWKDFcvttPQwnxNdd-EkNvRS2lBuuU");'>
+<div class="flex w-full items-end justify-between gap-4 p-4">
+<div class="flex max-w-[440px] flex-1 flex-col">
+<p class="text-primary tracking-tight text-4xl font-bold leading-tight">กิน <span class="text-lg font-medium">(kin)</span></p>
+<p class="text-white/90 text-lg font-medium">먹다 (Eat)</p>
+</div>
+<div class="bg-primary p-2.5 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-background-dark block">volume_up</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6 p-4">
+<div class="space-y-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">keyboard_double_arrow_left</span>
+<h3 class="text-white text-base font-bold tracking-tight">전치 수식어 (조동사/부정)</h3>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="border-2 border-dashed border-primary/30 bg-primary/5 rounded-xl h-24 flex flex-col items-center justify-center p-2 text-center">
+<span class="text-primary/50 text-[10px] font-bold uppercase mb-2">슬롯 1: 조동사 (미래)</span>
+<div class="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-bold border border-primary/30">
+                            จะ (jà) - ~할 것이다
+                        </div>
+</div>
+<div class="border-2 border-dashed border-white/10 bg-white/5 rounded-xl h-24 flex flex-col items-center justify-center p-2 text-center">
+<span class="text-white/20 text-[10px] font-bold uppercase mb-2">슬롯 2: 부정 (ไม่)</span>
+<span class="material-symbols-outlined text-white/20">add_circle</span>
+</div>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-2">
+<h3 class="text-white text-base font-bold tracking-tight">후치 수식어 (결과/능력/명사화)</h3>
+<span class="material-symbols-outlined text-primary text-sm">keyboard_double_arrow_right</span>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="border-2 border-dashed border-primary/30 bg-primary/5 rounded-xl h-24 flex flex-col items-center justify-center p-2 text-center">
+<span class="text-primary/50 text-[10px] font-bold uppercase mb-2">슬롯 3: 가능/보어</span>
+<div class="bg-primary text-background-dark px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+                            ได้ (dâai) - 할 수 있다
+                        </div>
+</div>
+<div class="border-2 border-dashed border-white/10 bg-white/5 rounded-xl h-24 flex flex-col items-center justify-center p-2 text-center">
+<span class="text-white/20 text-[10px] font-bold uppercase mb-2">슬롯 4: 상태/완료</span>
+<span class="material-symbols-outlined text-white/20">add_circle</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-auto p-4 bg-background-dark/95 backdrop-blur-md border-t border-white/10 pb-8">
+<p class="text-white/40 text-[10px] font-bold uppercase tracking-widest mb-4">사용 가능한 블록 (드래그하여 배치)</p>
+<div class="flex gap-3 overflow-x-auto pb-4 no-scrollbar">
+<div class="shrink-0 bg-white/5 border border-white/10 rounded-lg px-4 py-3 flex flex-col items-center min-w-[90px]">
+<span class="text-primary text-lg font-bold">ไม่</span>
+<span class="text-white/60 text-[11px] font-medium">안 한다 (부정)</span>
+</div>
+<div class="shrink-0 bg-white/5 border border-white/10 rounded-lg px-4 py-3 flex flex-col items-center min-w-[90px]">
+<span class="text-primary text-lg font-bold">อยู่</span>
+<span class="text-white/60 text-[11px] font-medium">~중이다 (진행)</span>
+</div>
+<div class="shrink-0 bg-white/5 border border-white/10 rounded-lg px-4 py-3 flex flex-col items-center min-w-[90px]">
+<span class="text-primary text-lg font-bold">แล้ว</span>
+<span class="text-white/60 text-[11px] font-medium">~했다 (완료)</span>
+</div>
+<div class="shrink-0 bg-white/5 border border-white/10 rounded-lg px-4 py-3 flex flex-col items-center min-w-[90px]">
+<span class="text-primary text-lg font-bold">เป็น</span>
+<span class="text-white/60 text-[11px] font-medium">~할 줄 알다</span>
+</div>
+</div>
+<div class="mt-2 bg-primary/10 border border-primary/20 rounded-xl p-4">
+<div class="flex items-center justify-between">
+<div>
+<p class="text-[10px] text-primary font-bold uppercase">현재 문장 미리보기</p>
+<p class="text-xl text-white font-bold tracking-wide">จะกินได้</p>
+<p class="text-sm text-white/60 italic font-light">"먹을 수 있게 될 것이다"</p>
+</div>
+<button class="bg-primary hover:bg-primary/90 transition-colors text-background-dark font-bold px-5 py-3 rounded-full flex items-center gap-1 shadow-lg active:scale-95">
+<span class="text-sm">다음</span>
+<span class="material-symbols-outlined text-lg">navigate_next</span>
+</button>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 bg-background-dark/95 border-t border-white/5 px-6 py-2 flex justify-between items-center z-50">
+<div class="flex flex-col items-center gap-1 text-white/40">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px]">홈</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="text-[10px]">코스</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-white/40">
+<span class="material-symbols-outlined">psychology</span>
+<span class="text-[10px]">AI 연구소</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-white/40">
+<span class="material-symbols-outlined">translate</span>
+<span class="text-[10px]">단어장</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-white/40">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px]">내 정보</span>
+</div>
+</div>
+</div>
+
+</body></html>

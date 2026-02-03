@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html class="dark" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;family=Noto+Sans+KR:wght@300;400;500;700&amp;family=Noto+Sans+Thai:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ecda",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102220",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "Noto Sans KR", "Noto Sans Thai", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', 'Noto Sans KR', 'Noto Sans Thai', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen flex flex-col">
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto w-full">
+<div class="flex size-10 shrink-0 items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined">close</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center">적응형 문맥 퀴즈</h2>
+<div class="flex size-10 items-center justify-end">
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-10 w-10 bg-transparent gap-2 text-base font-bold">
+<span class="material-symbols-outlined text-primary">emoji_objects</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-md mx-auto w-full flex flex-col">
+<div class="flex flex-col gap-2 p-4 pt-6">
+<div class="flex justify-between items-end">
+<p class="text-xs font-medium opacity-70">오늘의 학습 진행도</p>
+<p class="text-sm font-bold text-primary">7 / 10</p>
+</div>
+<div class="h-2 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500" style="width: 70%;"></div>
+</div>
+</div>
+<div class="px-4 pt-4">
+<span class="inline-block px-2 py-1 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider mb-2">뉴스 문맥 학습</span>
+<h3 class="text-2xl font-bold leading-tight">3분기 태국 경제 동향</h3>
+</div>
+<div class="p-4">
+<div class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover" data-alt="Thai stock market digital screen showing charts" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBILLSRy_lqldet0nCu1n4-pq58BD4pdWns60ntQoYQlFkX5iCPvxBKGvN0meOInHLSOlmAgaYqrzzqd1EOeC3kqv9qfiKlgnzsJcnEtRMpjstvFuRdLEUkFtlw36G-nO8k5MoWSEAT0KozmbRKT0ZrJZ0Y0_EilVOIAxwJfo51HCFgGKqNUL84p0ctp8QluxLHdRow_AxwfMg6uNfppLowqCRfN7XWiL36durJBx6inUnw-YMEg6ClAOH4c6t4c7ce4zFWoi0cxh0");'>
+</div>
+<div class="flex w-full flex-col gap-3 p-5">
+<p class="text-primary text-xs font-bold uppercase tracking-widest">문제</p>
+<p class="text-lg font-medium leading-relaxed">
+                    รัฐบาลชุดนี้มุ่งเน้นการแก้ปัญหาเศรษฐกิจและ <span class="px-4 border-b-2 border-primary mx-1 text-primary">_____</span> เพื่อความมั่นคงของชาติ
+                </p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-3 p-4">
+<label class="group flex items-center justify-between rounded-xl border-2 border-slate-200 dark:border-slate-800 px-5 h-16 text-base font-medium transition-all hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+<span>ความปลอดภัย (안전/안보)</span>
+<div class="h-6 w-6 rounded-full border-2 border-slate-300 dark:border-slate-700 group-has-[:checked]:border-primary flex items-center justify-center">
+<div class="h-3 w-3 rounded-full bg-primary scale-0 group-has-[:checked]:scale-100 transition-transform"></div>
+</div>
+<input checked="" class="hidden" name="quiz-option" type="radio"/>
+</label>
+<label class="group flex items-center justify-between rounded-xl border-2 border-slate-200 dark:border-slate-800 px-5 h-16 text-base font-medium transition-all hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+<span>การศึกษา (교육)</span>
+<div class="h-6 w-6 rounded-full border-2 border-slate-300 dark:border-slate-700 group-has-[:checked]:border-primary flex items-center justify-center">
+<div class="h-3 w-3 rounded-full bg-primary scale-0 group-has-[:checked]:scale-100 transition-transform"></div>
+</div>
+<input class="hidden" name="quiz-option" type="radio"/>
+</label>
+<label class="group flex items-center justify-between rounded-xl border-2 border-slate-200 dark:border-slate-800 px-5 h-16 text-base font-medium transition-all hover:bg-slate-50 dark:hover:bg-slate-800/50 cursor-pointer has-[:checked]:border-primary has-[:checked]:bg-primary/5">
+<span>สิ่งแวดล้อม (환경)</span>
+<div class="h-6 w-6 rounded-full border-2 border-slate-300 dark:border-slate-700 group-has-[:checked]:border-primary flex items-center justify-center">
+<div class="h-3 w-3 rounded-full bg-primary scale-0 group-has-[:checked]:scale-100 transition-transform"></div>
+</div>
+<input class="hidden" name="quiz-option" type="radio"/>
+</label>
+</div>
+<div class="px-4 pb-6">
+<button class="w-full bg-slate-800 dark:bg-slate-700 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2">
+<span>정답 확인</span>
+</button>
+</div>
+<div class="mt-auto rounded-t-3xl bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 shadow-2xl p-6 pb-10">
+<div class="w-12 h-1.5 bg-slate-300 dark:bg-slate-700 rounded-full mx-auto mb-6"></div>
+<div class="flex items-center gap-3 mb-4">
+<div class="size-10 rounded-full bg-green-500/20 text-green-500 flex items-center justify-center">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">정답입니다!</h4>
+<p class="text-sm opacity-60">문맥에 맞는 단어를 정확히 찾으셨네요.</p>
+</div>
+</div>
+<div class="space-y-6">
+<div class="space-y-2">
+<h5 class="text-xs font-bold text-primary uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">translate</span> 해설 보기
+                </h5>
+<p class="text-slate-700 dark:text-slate-300 italic leading-relaxed font-display">
+                    "รัฐบาลชุดนี้มุ่งเน้นการแก้ปัญหาเศรษฐกิจและ<span class="text-primary font-bold">ความปลอดภัย</span>เพื่อความมั่นคงของชาติ"
+                </p>
+</div>
+<div class="space-y-2">
+<h5 class="text-xs font-bold text-primary uppercase tracking-wider">한국어 번역</h5>
+<p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+                    "현 정부는 국가 안보를 위해 경제 문제와 <span class="font-bold">안전(안보)</span> 해결에 집중하고 있습니다."
+                </p>
+</div>
+<div class="space-y-2">
+<h5 class="text-xs font-bold text-primary uppercase tracking-wider">핵심 표현 및 문법</h5>
+<div class="bg-background-light dark:bg-background-dark p-4 rounded-xl border border-slate-200 dark:border-slate-800">
+<div class="text-sm space-y-3 leading-relaxed">
+<p>
+<span class="font-bold text-primary">มุ่งเน้น (mûng-néen):</span> 집중하다, 강조하다. <br/>
+<span class="text-xs opacity-70 italic">Tip: 태국 뉴스에서 정책이나 전략적 우선순위를 설명할 때 자주 등장하는 동사입니다.</span>
+</p>
+<p>
+<span class="font-bold text-primary">ความปลอดภัย (kwaam-plòot-pai):</span> 안전, 안보. <br/>
+<span class="text-xs opacity-70 italic">Tip: 접두사 <span class="text-primary">ความ (kwaam)</span>은 형용사를 추상 명사화할 때 사용됩니다. 한국어의 '~함', '~기', '~성'과 유사한 역할을 합니다.</span>
+</p>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary text-background-dark font-bold py-4 rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+<span>다음 학습 이어가기</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+<nav class="sticky bottom-0 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 px-6 py-3 flex justify-between items-center max-w-md mx-auto w-full">
+<div class="flex flex-col items-center gap-1 opacity-60">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold">홈</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined leading-none">auto_stories</span>
+<span class="text-[10px] font-bold">코스</span>
+</div>
+<div class="flex flex-col items-center gap-1 opacity-60">
+<span class="material-symbols-outlined">psychology</span>
+<span class="text-[10px] font-bold">AI 연구소</span>
+</div>
+<div class="flex flex-col items-center gap-1 opacity-60">
+<span class="material-symbols-outlined">style</span>
+<span class="text-[10px] font-bold">단어장</span>
+</div>
+<div class="flex flex-col items-center gap-1 opacity-60">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold">내 정보</span>
+</div>
+</nav>
+
+</body></html>

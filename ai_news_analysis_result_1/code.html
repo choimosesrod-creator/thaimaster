@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html class="dark" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;family=Noto+Sans+KR:wght@300;400;500;700&amp;family=Noto+Sans+Thai:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ecda",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102220",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "Noto Sans KR", "Noto Sans Thai", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Lexend', 'Noto Sans KR', 'Noto Sans Thai', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .thai-text {
+            line-height: 1.8;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white pb-32">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-20 border-b border-slate-200 dark:border-slate-800">
+<div class="text-slate-900 dark:text-white flex size-12 shrink-0 items-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center">AI 뉴스 분석 결과</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-slate-900 dark:text-white gap-2 text-base font-bold leading-normal p-0">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</div>
+<div class="p-4">
+<div class="relative flex items-center justify-center bg-slate-200 dark:bg-slate-800 bg-cover bg-center aspect-video rounded-xl overflow-hidden shadow-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCoxfKdMl5TvWBHEipInerJJnxOs1m1_MQFhw3cBQlY1ibLdZ7IV6JfnWoczhv9s8oYXLwv8BCwy1-2tV_lqBuh1WqeybXmcxA_-1bFqUJuer8KnJHD8o8gpfONppgVqPNu_40vyNPrs9Zps0yOv4fPqWssYA885CBgmQbnI8Y0VBqP4TXB5bx7AOmXfFlaLFfeiRMHZNbxd96ghqcdyCpHkocbtgJIsS1qtdqkPe3W6M_filn4xaJFw2k61NmZHzez4iqp5Q7XDVA");'>
+<button class="flex shrink-0 items-center justify-center rounded-full size-16 bg-black/50 text-white backdrop-blur-sm border border-white/20">
+<span class="material-symbols-outlined !text-4xl" style="font-variation-settings: 'FILL' 1">play_arrow</span>
+</button>
+<div class="absolute inset-x-0 bottom-0 px-4 py-3 bg-gradient-to-t from-black/80 to-transparent">
+<div class="flex h-4 items-center justify-center mb-1">
+<div class="h-1 flex-1 rounded-full bg-primary"></div>
+<div class="relative">
+<div class="absolute -left-1.5 -top-1.5 size-3 rounded-full bg-white shadow-md"></div>
+</div>
+<div class="h-1 w-2/3 rounded-full bg-white/30"></div>
+</div>
+<div class="flex items-center justify-between">
+<p class="text-white text-[10px] font-medium tracking-wider">04:12</p>
+<p class="text-white text-[10px] font-medium tracking-wider">12:45</p>
+</div>
+</div>
+</div>
+</div>
+<div class="px-4">
+<h3 class="text-slate-900 dark:text-white tracking-tight text-2xl font-bold leading-tight pt-2 thai-text">
+                เจาะลึกเศรษฐกิจไทยปี 2024: การฟื้นตัวและท้าทาย
+            </h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Channel 7 HD News • 2일 전</p>
+<button class="mt-3 flex items-center gap-2 text-primary font-bold text-sm">
+<span class="material-symbols-outlined text-sm">description</span>
+                스크립트 보기
+            </button>
+</div>
+<div class="h-6"></div>
+<div class="mx-4 bg-primary/10 border-l-4 border-primary rounded-r-lg">
+<div class="flex items-center px-4 pt-4">
+<span class="material-symbols-outlined text-primary mr-2">auto_awesome</span>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight">AI 요약</h3>
+</div>
+<p class="text-slate-700 dark:text-slate-300 text-base font-normal leading-relaxed pb-4 pt-2 px-4">
+                이 뉴스는 2024년 태국 경제의 주요 흐름을 분석합니다. 관광 산업의 회복이 주요 성장 동력이지만, 가계 부채 증가와 글로벌 수출 둔화가 주요 리스크로 지목되었습니다. 태국 정부는 디지털 지갑 정책을 통해 내수 소비를 진작할 계획입니다.
+            </p>
+</div>
+<div class="h-8"></div>
+<div class="px-4">
+<div class="flex items-center mb-4">
+<span class="material-symbols-outlined text-primary mr-2">architecture</span>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold">핵심 문법 패턴</h3>
+</div>
+<div class="space-y-4">
+<div class="p-4 bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl">
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2 py-0.5 bg-primary/20 text-primary text-[10px] font-bold rounded uppercase">문법</span>
+<span class="text-slate-900 dark:text-white font-bold thai-text">การ + 동사 (명사화)</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 mb-3">동사 앞에 붙어 '...하는 것', '...함'의 의미로 명사를 만듭니다.</p>
+<div class="bg-background-light dark:bg-slate-900 p-3 rounded-lg border-l-2 border-primary">
+<p class="text-slate-900 dark:text-white thai-text font-medium text-lg">การฟื้นตัว (깐-픈-뚜아)</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">회복 / 되살아남 (동사: ฟื้นตัว = 회복하다)</p>
+</div>
+</div>
+<div class="p-4 bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl">
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2 py-0.5 bg-primary/20 text-primary text-[10px] font-bold rounded uppercase">동사 우선</span>
+<span class="text-slate-900 dark:text-white font-bold thai-text">เจาะลึก (쩌-륵)</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 mb-3">'깊게 파다' 혹은 '심층적으로 분석하다'라는 의미의 복합 동사입니다.</p>
+</div>
+</div>
+</div>
+<div class="h-8"></div>
+<div class="px-4">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-primary mr-2">translate</span>
+<h3 class="text-slate-900 dark:text-white text-lg font-bold">주요 어휘</h3>
+</div>
+<span class="text-xs text-primary font-medium">12개 단어 발견</span>
+</div>
+<div class="grid grid-cols-1 gap-3">
+<div class="flex items-center justify-between p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm">
+<div class="flex-1">
+<div class="flex items-baseline gap-2">
+<h4 class="text-slate-900 dark:text-white font-bold text-lg thai-text">เศรษฐกิจ</h4>
+<span class="text-slate-400 dark:text-slate-500 text-xs italic">[셋-타-낏]</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm">경제 / 경제학</p>
+</div>
+<button class="flex items-center gap-1 bg-primary/10 hover:bg-primary/20 text-primary px-3 py-1.5 rounded-full transition-colors">
+<span class="material-symbols-outlined text-sm">play_circle</span>
+<span class="text-xs font-bold">00:45</span>
+</button>
+</div>
+<div class="flex items-center justify-between p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm">
+<div class="flex-1">
+<div class="flex items-baseline gap-2">
+<h4 class="text-slate-900 dark:text-white font-bold text-lg thai-text">ท้าทาย</h4>
+<span class="text-slate-400 dark:text-slate-500 text-xs italic">[타-타이]</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm">도전하다 / 도전적인</p>
+</div>
+<button class="flex items-center gap-1 bg-primary/10 hover:bg-primary/20 text-primary px-3 py-1.5 rounded-full transition-colors">
+<span class="material-symbols-outlined text-sm">play_circle</span>
+<span class="text-xs font-bold">01:12</span>
+</button>
+</div>
+<div class="flex items-center justify-between p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 shadow-sm">
+<div class="flex-1">
+<div class="flex items-baseline gap-2">
+<h4 class="text-slate-900 dark:text-white font-bold text-lg thai-text">หนี้ครัวเรือน</h4>
+<span class="text-slate-400 dark:text-slate-500 text-xs italic">[니-쿠아-르언]</span>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm">가계 부채</p>
+</div>
+<button class="flex items-center gap-1 bg-primary/10 hover:bg-primary/20 text-primary px-3 py-1.5 rounded-full transition-colors">
+<span class="material-symbols-outlined text-sm">play_circle</span>
+<span class="text-xs font-bold">03:28</span>
+</button>
+</div>
+</div>
+<button class="w-full mt-4 py-3 border-2 border-dashed border-slate-200 dark:border-slate-700 rounded-xl text-slate-400 dark:text-slate-500 font-medium text-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">expand_more</span>
+                전체 단어장 보기
+            </button>
+</div>
+<div class="fixed bottom-0 inset-x-0 z-30">
+<div class="p-4 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-t border-slate-200 dark:border-slate-800">
+<button class="w-full bg-primary py-4 rounded-xl text-slate-900 font-bold text-lg shadow-[0_4px_20px_rgba(19,236,218,0.3)]">
+                    단어장 저장
+                </button>
+</div>
+<div class="flex justify-around items-center bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 py-2 px-4">
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">홈</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">school</span>
+<span class="text-[10px] font-medium">코스</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">science</span>
+<span class="text-[10px] font-medium">AI 연구소</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="text-[10px] font-medium">단어장</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">내 정보</span>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>
