@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html class="dark" lang="ko"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;family=Noto+Sans+KR:wght@100..900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<html class="dark" lang="ko">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -25,138 +26,106 @@
             },
         }
     </script>
-<title>태국어 학습 대시보드</title>
-<style>
-        body {
-            min-height: max(884px, 100dvh);
-        }
+    <title>태국어 학습 대시보드</title>
+    <style>
+        body { min-height: max(884px, 100dvh); cursor: default; }
+        .nav-item { cursor: pointer; transition: all 0.2s; }
+        .nav-item:hover { color: #13ecda; }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
+</head>
 <body class="bg-background-light dark:bg-background-dark font-display text-white">
 <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
-<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-50">
-<div class="flex size-12 shrink-0 items-center">
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary" data-alt="User profile avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDei-Fdz6FaGhUgFu7UAK5vCvtsHAgDuxKZLeklO6Epa8zmC-y3Qxzv62G74hG1-kNxtwFag2T8qSKaMS_X7cu_DZbwYFw5RZwK2TjNmS4vQBaNlfDtrKJNIGdBf-7vpO-_M7ATET8ye1ietL1iZW7vaEw6msxNbPn7zR42Dh9a795z9deVGsj5b4vWrmaJUg5q0m3vV0XDoOA0HjdbmvHBk9UJZB8Pint3Vzki58zwIrdxGUGvpl8E0YZGpVY89NDK3WRO656CFrE");'></div>
-</div>
-<div class="flex flex-col flex-1 px-2">
-<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight">태국어 학습자</h2>
-<p class="text-xs text-slate-500 dark:text-[#9db9b7]">사와디캅, 알렉스님!</p>
-</div>
-<div class="flex w-12 items-center justify-end">
-<button class="flex size-10 cursor-pointer items-center justify-center rounded-full bg-slate-200 dark:bg-[#1c2726] text-slate-900 dark:text-white transition-colors hover:bg-primary/20">
-<span class="material-symbols-outlined">settings</span>
-</button>
-</div>
-</div>
-<div class="px-4 py-2">
-<h2 class="text-slate-900 dark:text-white text-[20px] font-bold leading-tight px-1 pb-3">오늘의 학습 현황</h2>
-<div class="bg-white dark:bg-card-dark rounded-xl p-4 shadow-sm border border-slate-200 dark:border-white/5">
-<div class="flex items-center gap-3 mb-2">
-<span class="material-symbols-outlined text-primary">analytics</span>
-<p class="text-slate-900 dark:text-white text-base font-semibold">핵심 25 동사 마스터리</p>
-</div>
-<div class="flex gap-6 justify-between items-end mb-2">
-<p class="text-slate-500 dark:text-[#9db9b7] text-sm font-normal">탄탄한 기초 쌓기</p>
-<p class="text-primary text-sm font-bold">16/25</p>
-</div>
-<div class="rounded-full bg-slate-200 dark:bg-[#3b5452] h-2.5 overflow-hidden">
-<div class="h-full rounded-full bg-primary" style="width: 65%;"></div>
-</div>
-<p class="text-slate-400 dark:text-[#9db9b7]/60 text-xs mt-3 italic">오늘 "Gin" (먹다)와 "Non" (자다)를 마스터했습니다!</p>
-</div>
-</div>
-<div class="px-4 py-2">
-<h2 class="text-slate-900 dark:text-white text-[20px] font-bold leading-tight px-1 pb-3">오늘의 단어</h2>
-<div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-accent/20 to-accent/5 p-4 border border-accent/20">
-<div class="flex justify-between items-start">
-<div>
-<p class="text-accent text-xs font-bold uppercase tracking-wider">Word of the Day</p>
-<h3 class="text-slate-900 dark:text-white text-2xl font-bold mt-1">เศรษฐกิจ</h3>
-<p class="text-slate-600 dark:text-slate-300 text-sm font-medium">sèt-tà-git • 경제</p>
-</div>
-<span class="material-symbols-outlined text-accent text-3xl">trending_up</span>
-</div>
-<p class="text-slate-500 dark:text-slate-400 text-xs mt-3">뉴스 트렌드: 오늘 12개의 주요 헤드라인에 등장했습니다.</p>
-</div>
-</div>
-<div class="px-4 py-2">
-<h2 class="text-slate-900 dark:text-white text-[20px] font-bold leading-tight px-1 pb-3">AI 뉴스 분석기</h2>
-<div class="flex flex-col items-stretch justify-start rounded-xl shadow-lg bg-white dark:bg-card-dark overflow-hidden border border-slate-200 dark:border-white/5">
-<div class="w-full bg-center bg-no-repeat aspect-video bg-cover relative" data-alt="YouTube video analysis" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAslfGQObw0JhxTNKy7WnNOwgQGW69B7Na2Muax3oho-xIOW5RSAbtZDaLu_dVDCGrbwtA56QUnd04ube48snMF0XuQuYws1Ib1qTGDK0Wvt4E7RuU2f023bevZS1h8Ul2oij7V5fYJ4ZbxlkBZCc1sf6xAWXZWcIVBEEzUUu8gSc5zIvkx2EHMskAK_upI81bzbfIxaEWJBSNaw2GNMPrQAmJ3j6TBmsd2Qo6hGj0MQ8wddnch-gOUBLDB77f2qnJERMBk1hwqIt4");'>
-<div class="absolute inset-0 bg-black/40 flex items-center justify-center">
-<div class="bg-white/20 backdrop-blur-md p-3 rounded-full">
-<span class="material-symbols-outlined text-white text-4xl">smart_toy</span>
-</div>
-</div>
-</div>
-<div class="flex w-full grow flex-col items-stretch justify-center gap-3 p-4">
-<div>
-<p class="text-slate-900 dark:text-white text-lg font-bold leading-tight">유튜브 뉴스 분석</p>
-<p class="text-slate-500 dark:text-[#9db9b7] text-sm mt-1">태국어 뉴스 링크를 붙여넣으면 즉시 단어장과 문법 노트를 생성합니다.</p>
-</div>
-<div class="flex items-center gap-2">
-<div class="relative flex-1">
-<input class="w-full h-10 px-3 rounded-lg bg-slate-100 dark:bg-[#111817] border-none text-sm text-slate-900 dark:text-white focus:ring-1 focus:ring-primary" placeholder="https://youtube.com/..." type="text"/>
-</div>
-<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold shadow-sm active:scale-95 transition-transform">
-<span class="truncate">분석하기</span>
-</button>
-</div>
-</div>
-</div>
-</div>
-<div class="px-4 py-2 mb-24">
-<h2 class="text-slate-900 dark:text-white text-[20px] font-bold leading-tight px-1 pb-3">매일 학습 드릴</h2>
-<div class="grid grid-cols-2 gap-3">
-<div class="bg-white dark:bg-card-dark p-4 rounded-xl border border-slate-200 dark:border-white/5 flex flex-col items-center text-center gap-2">
-<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center">
-<span class="material-symbols-outlined text-primary text-2xl">music_note</span>
-</div>
-<div>
-<p class="text-slate-900 dark:text-white text-sm font-bold">성조 마스터리</p>
-<p class="text-slate-500 dark:text-[#9db9b7] text-xs">5분 소요</p>
-</div>
-<button class="mt-1 w-full py-1.5 rounded-lg bg-slate-100 dark:bg-[#2a3a38] text-xs font-semibold">시작하기</button>
-</div>
-<div class="bg-white dark:bg-card-dark p-4 rounded-xl border border-slate-200 dark:border-white/5 flex flex-col items-center text-center gap-2">
-<div class="size-12 rounded-full bg-accent/10 flex items-center justify-center">
-<span class="material-symbols-outlined text-accent text-2xl">translate</span>
-</div>
-<div>
-<p class="text-slate-900 dark:text-white text-sm font-bold">모음 연습</p>
-<p class="text-slate-500 dark:text-[#9db9b7] text-xs">3분 소요</p>
-</div>
-<button class="mt-1 w-full py-1.5 rounded-lg bg-slate-100 dark:bg-[#2a3a38] text-xs font-semibold">시작하기</button>
-</div>
-</div>
-</div>
-<div class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-background-dark/80 backdrop-blur-lg border-t border-slate-200 dark:border-white/5 flex justify-around py-3 pb-6 z-50">
-<div class="flex flex-col items-center gap-1 text-primary">
-<span class="material-symbols-outlined">home</span>
-<span class="text-[10px] font-medium">홈</span>
-</div>
-<div class="flex flex-col items-center gap-1 text-slate-400 dark:text-[#9db9b7]">
-<span class="material-symbols-outlined">menu_book</span>
-<span class="text-[10px] font-medium">코스</span>
-</div>
-<div class="flex flex-col items-center gap-1 text-slate-400 dark:text-[#9db9b7]">
-<span class="material-symbols-outlined">science</span>
-<span class="text-[10px] font-medium">AI 연구소</span>
-</div>
-<div class="flex flex-col items-center gap-1 text-slate-400 dark:text-[#9db9b7]">
-<span class="material-symbols-outlined">history_edu</span>
-<span class="text-[10px] font-medium">단어장</span>
-</div>
-<div class="flex flex-col items-center gap-1 text-slate-400 dark:text-[#9db9b7]">
-<span class="material-symbols-outlined">person</span>
-<span class="text-[10px] font-medium">내 정보</span>
-</div>
-</div>
-</div>
+    <div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-50">
+        <div class="flex size-12 shrink-0 items-center">
+            <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary" style='background-image: url("https://api.dicebear.com/7.x/avataaars/svg?seed=Felix");'></div>
+        </div>
+        <div class="flex flex-col flex-1 px-2">
+            <h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight">태국어 학습자</h2>
+            <p class="text-xs text-slate-500 dark:text-[#9db9b7]">사와디캅, 목사님!</p>
+        </div>
+        <div class="flex w-12 items-center justify-end">
+            <button class="flex size-10 cursor-pointer items-center justify-center rounded-full bg-slate-200 dark:bg-[#1c2726] text-slate-900 dark:text-white transition-colors hover:bg-primary/20">
+                <span class="material-symbols-outlined">settings</span>
+            </button>
+        </div>
+    </div>
 
-</body></html>
+    <div class="px-4 py-2">
+        <h2 class="text-slate-900 dark:text-white text-[20px] font-bold leading-tight px-1 pb-3">오늘의 학습 현황</h2>
+        <div onclick="location.href='./thai_learner_dashboard_1/code.html'" class="cursor-pointer bg-white dark:bg-card-dark rounded-xl p-4 shadow-sm border border-slate-200 dark:border-white/5 hover:border-primary/50 transition-all">
+            <div class="flex items-center gap-3 mb-2">
+                <span class="material-symbols-outlined text-primary">analytics</span>
+                <p class="text-slate-900 dark:text-white text-base font-semibold">전체 진도율</p>
+            </div>
+            <div class="flex gap-6 justify-between items-end mb-2">
+                <p class="text-slate-500 dark:text-[#9db9b7] text-sm font-normal">태국어 마스터 과정</p>
+                <p class="text-primary text-sm font-bold">65%</p>
+            </div>
+            <div class="rounded-full bg-slate-200 dark:bg-[#3b5452] h-2.5 overflow-hidden">
+                <div class="h-full rounded-full bg-primary" style="width: 65%;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="px-4 py-2">
+        <h2 class="text-slate-900 dark:text-white text-[20px] font-bold leading-tight px-1 pb-3">AI 뉴스 분석기</h2>
+        <div class="flex flex-col items-stretch justify-start rounded-xl shadow-lg bg-white dark:bg-card-dark overflow-hidden border border-slate-200 dark:border-white/5">
+            <div class="w-full bg-slate-800 aspect-video relative flex items-center justify-center">
+                <span class="material-symbols-outlined text-primary text-6xl">movie</span>
+            </div>
+            <div class="flex w-full grow flex-col items-stretch justify-center gap-3 p-4">
+                <div>
+                    <p class="text-slate-900 dark:text-white text-lg font-bold leading-tight">유튜브 뉴스 분석</p>
+                    <p class="text-slate-500 dark:text-[#9db9b7] text-sm mt-1">뉴스 링크를 분석하여 단어장을 생성합니다.</p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <input class="w-full h-10 px-3 rounded-lg bg-slate-100 dark:bg-[#111817] border-none text-sm text-slate-900 dark:text-white focus:ring-1 focus:ring-primary" placeholder="URL을 입력하세요" type="text"/>
+                    <button onclick="location.href='./ai_news_analysis_result_1/code.html'" class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-background-dark text-sm font-bold shadow-sm active:scale-95 transition-transform">
+                        <span>분석하기</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="px-4 py-2 mb-24">
+        <h2 class="text-slate-900 dark:text-white text-[20px] font-bold leading-tight px-1 pb-3">매일 학습 드릴</h2>
+        <div class="grid grid-cols-2 gap-3">
+            <div class="bg-white dark:bg-card-dark p-4 rounded-xl border border-slate-200 dark:border-white/5 flex flex-col items-center text-center gap-2">
+                <div class="size-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-primary text-2xl">music_note</span>
+                </div>
+                <p class="text-slate-900 dark:text-white text-sm font-bold">성조 퀴즈</p>
+                <button onclick="location.href='./adaptive_contextual_quiz_1/code.html'" class="mt-1 w-full py-1.5 rounded-lg bg-slate-100 dark:bg-[#2a3a38] text-xs font-semibold hover:bg-primary/20">시작하기</button>
+            </div>
+            <div class="bg-white dark:bg-card-dark p-4 rounded-xl border border-slate-200 dark:border-white/5 flex flex-col items-center text-center gap-2">
+                <div class="size-12 rounded-full bg-accent/10 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-accent text-2xl">translate</span>
+                </div>
+                <p class="text-slate-900 dark:text-white text-sm font-bold">문장 만들기</p>
+                <button onclick="location.href='./verb-first_sentence_builder_1/code.html'" class="mt-1 w-full py-1.5 rounded-lg bg-slate-100 dark:bg-[#2a3a38] text-xs font-semibold hover:bg-accent/20">시작하기</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed bottom-0 left-0 right-0 bg-white/80 dark:bg-background-dark/80 backdrop-blur-lg border-t border-slate-200 dark:border-white/5 flex justify-around py-3 pb-6 z-50">
+        <div onclick="location.href='index.html'" class="nav-item flex flex-col items-center gap-1 text-primary">
+            <span class="material-symbols-outlined">home</span>
+            <span class="text-[10px] font-medium">홈</span>
+        </div>
+        <div onclick="location.href='./thai_learner_dashboard_1/code.html'" class="nav-item flex flex-col items-center gap-1 text-slate-400 dark:text-[#9db9b7]">
+            <span class="material-symbols-outlined">menu_book</span>
+            <span class="text-[10px] font-medium">코스</span>
+        </div>
+        <div onclick="location.href='./ai_news_analysis_result_1/code.html'" class="nav-item flex flex-col items-center gap-1 text-slate-400 dark:text-[#9db9b7]">
+            <span class="material-symbols-outlined">smart_toy</span>
+            <span class="text-[10px] font-medium">AI 분석</span>
+        </div>
+        <div onclick="location.href='./verb-first_sentence_builder_1/code.html'" class="nav-item flex flex-col items-center gap-1 text-slate-400 dark:text-[#9db9b7]">
+            <span class="material-symbols-outlined">history_edu</span>
+            <span class="text-[10px] font-medium">단어장</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
